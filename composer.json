@@ -1,0 +1,18 @@
+{
+    "description": "Stuff to help you create anchor links",
+    "type": "neos-package",
+    "name": "dimaip/anchor",
+    "require": {
+        "typo3/neos": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Dimaip\\Anchor": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Dimaip.Anchor"
+        }
+    }
+}

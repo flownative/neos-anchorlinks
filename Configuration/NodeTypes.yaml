@@ -1,0 +1,15 @@
+'Dimaip.Anchor:AnchorMixin':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        anchor:
+          label: i18n
+  properties:
+    sectionId:
+      type: string
+      ui:
+        reloadIfChanged: true
+        label: i18n
+        inspector:
+          group: anchor
