@@ -6,4 +6,6 @@ TYPO3:
     userInterface:
       translation:
         autoInclude:
-          'Dimaip.Anchor': ['NodeTypes/*']
+          'Dimaip.Anchor': ['Main', 'NodeTypes/*']
+      requireJsPathMapping:
+        'Dimaip.Anchor/Views': 'resource://Dimaip.Anchor/Public/JavaScript/Inspector/Views'

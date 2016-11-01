@@ -5,6 +5,11 @@
       groups:
         anchor:
           label: i18n
+      views:
+        anchor:
+          label: 'Anchor view'
+          group: 'anchor'
+          view: 'Dimaip.Anchor/Views/AnchorView'
   properties:
     sectionId:
       type: string

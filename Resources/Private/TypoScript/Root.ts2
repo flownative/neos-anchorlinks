@@ -1,41 +1,7 @@
-# Meant to be used as a processor. Would prepend a tag with sectionId and the button
-# to copy current sectionId to clipboard
+# Meant to be used as a processor. Would prepend a tag with sectionId
 prototype(Dimaip.Anchor:AnchorWrapper) < prototype(TYPO3.TypoScript:Value) {
-	anchor = TYPO3.TypoScript:Array {
-		anchor = TYPO3.TypoScript:Tag {
-			attributes.id = ${q(node).property('sectionId')}
-		}
-		button = TYPO3.TypoScript:Tag {
-			content = TYPO3.TypoScript:Tag {
-				tagName = 'img'
-				attributes.alt = 'Copy link to clipboard'
-				attributes.width = 16
-				attributes.src = TYPO3.TypoScript:ResourceUri {
-					path = 'resource://Dimaip.Anchor/Public/Images/Clipboard.svg'
-				}
-			}
-			tagName = 'button'
-			attributes.onclick = ${"copyToClipboard(this.dataset.id)"}
-			attributes.data-id = ${'node://' + documentNode.identifier + '#' + q(node).property('sectionId')}
-			@if.inBackend = ${node.context.inBackend ? true : false}
-		}
-		value = ${value}
+	anchor = TYPO3.TypoScript:Tag {
+		attributes.id = ${q(node).property('sectionId')}
 	}
-	value = ${q(node).property('sectionId') ? this.anchor : value}
-}
-
-# copyToClipboard helper function. It's short, so we put it straight in Fusion...
-prototype(TYPO3.Neos:Page).body.javascripts.anchor = TYPO3.TypoScript:Tag {
-	tagName = 'script'
-	content = ${"
-		function copyToClipboard(value) {
-			var textArea = document.createElement('textarea');
-			textArea.innerText = value;
-			document.body.appendChild(textArea);
-			textArea.select();
-			document.execCommand('copy');
-			textArea.parentNode.removeChild(textArea);
-		}
-	"}
-	@if.inBackend = ${node.context.inBackend ? true : false}
+	value = ${q(node).property('sectionId') ? this.anchor + value : value}
 }
