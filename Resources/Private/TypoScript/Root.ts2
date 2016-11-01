@@ -21,7 +21,7 @@ prototype(Dimaip.Anchor:AnchorWrapper) < prototype(TYPO3.TypoScript:Value) {
 		}
 		value = ${value}
 	}
-	value = ${q(node).property('sectionId') ? this.anchor + value : value}
+	value = ${q(node).property('sectionId') ? this.anchor : value}
 }
 
 # copyToClipboard helper function. It's short, so we put it straight in Fusion...
