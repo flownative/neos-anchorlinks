@@ -18,7 +18,7 @@ E.g. this code will add such ability to every Content nodetype:
     'Dimaip.Anchor:AnchorMixin': true
 ```
 
-Add `Dimaip.Anchor:AnchorWrapper` processor to the same nodetype to insert anchor tag with given id before it.
+Add `Dimaip.Anchor:AnchorWrapper` processor to the same nodetype renderer to insert anchor tag with given id before it.
 
 E.g.:
 
@@ -32,6 +32,6 @@ prototype(TYPO3.Neos:Content) {
 
 Choose some content node that you would like to link to, and fill in `sectionId` inspector property.
 
-After that you would see a button prepended to every element with filled it `sectionId`.
+After that you would see a button appear below to copy link to this node to clipboard.
 
 When you click that button, the link to the given node will be copied to the clipboard. Paste it in insert link field in Aloha editor and you are done!
