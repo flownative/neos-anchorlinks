@@ -18,8 +18,9 @@ function(
 			return this.get('inspector.nodeProperties.sectionId') ? true : false;
 		}.property('inspector.nodeProperties.sectionId'),
 		copyToClipboard: function () {
+			var documentNodeIdentifier = document.querySelector('[name="anchor-documentNodeIdentifier"]').getAttribute('content');
+			var link = 'node://' + documentNodeIdentifier + '#' + this.get('inspector.nodeProperties.sectionId');
 			var textArea = document.createElement('textarea');
-			var link = 'node://' + this.get('inspector.nodeProperties._identifier') + '#' + this.get('inspector.nodeProperties.sectionId');
 			textArea.innerText = link;
 			document.body.appendChild(textArea);
 			textArea.select();
