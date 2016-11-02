@@ -18,7 +18,7 @@ function(
 			return this.get('inspector.nodeProperties.sectionId') ? true : false;
 		}.property('inspector.nodeProperties.sectionId'),
 		copyToClipboard: function () {
-			var documentNodeIdentifier = document.querySelector('[name="anchor-documentNodeIdentifier"]').getAttribute('content');
+			var documentNodeIdentifier = document.getElementById('neos-document-metadata').dataset['node-_identifier'];
 			var link = 'node://' + documentNodeIdentifier + '#' + this.get('inspector.nodeProperties.sectionId');
 			var textArea = document.createElement('textarea');
 			textArea.innerText = link;

@@ -5,13 +5,3 @@ prototype(Flownative.Anchorlinks:AnchorWrapper) < prototype(TYPO3.TypoScript:Val
 	}
 	value = ${q(node).property('sectionId') ? this.anchor + value : value}
 }
-
-# Render documentNode identifier to access it in anchor view
-prototype(TYPO3.Neos:Page).head.anchorHelper = TYPO3.TypoScript:Tag {
-	tagName = 'meta'
-	attributes {
-		name = 'anchor-documentNodeIdentifier'
-		content = ${documentNode.identifier}
-	}
-	@if.inBackend = ${node.context.inBackend ? true : false}
-}
