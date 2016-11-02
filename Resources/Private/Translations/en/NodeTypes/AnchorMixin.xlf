@@ -8,6 +8,9 @@
 			<trans-unit id="properties.sectionId" xml:space="preserve">
 				<source>Section id</source>
 			</trans-unit>
+			<trans-unit id="properties.sectionId.ui.help.message" xml:space="preserve">
+				<source>Fill in sectionId and click button below to copy link to this node. Paste it in the Aloha's link editor and you are done!</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -18,3 +18,5 @@
         label: i18n
         inspector:
           group: anchor
+        help:
+          message: i18n
