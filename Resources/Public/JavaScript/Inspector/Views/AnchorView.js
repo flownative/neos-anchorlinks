@@ -19,7 +19,8 @@ function(
 		}.property('inspector.nodeProperties.sectionId'),
 		copyToClipboard: function () {
 			var textArea = document.createElement('textarea');
-			textArea.innerText = this.get('inspector.nodeProperties.sectionId');
+			var link = 'node://' + this.get('inspector.nodeProperties._identifier') + '#' + this.get('inspector.nodeProperties.sectionId');
+			textArea.innerText = link;
 			document.body.appendChild(textArea);
 			textArea.select();
 			document.execCommand('copy');
