@@ -1,5 +1,5 @@
 # Meant to be used as a processor. Would prepend a tag with the sectionId
-prototype(Dimaip.Anchor:AnchorWrapper) < prototype(TYPO3.TypoScript:Value) {
+prototype(Flownative.Anchorlinks:AnchorWrapper) < prototype(TYPO3.TypoScript:Value) {
 	anchor = TYPO3.TypoScript:Tag {
 		attributes.id = ${q(node).property('sectionId')}
 	}

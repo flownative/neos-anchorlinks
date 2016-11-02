@@ -1,4 +1,4 @@
-# Dimaip.Anchor
+# Flownative.Anchorlinks
 
 Create anchor links to any content element on the page.
 
@@ -8,23 +8,23 @@ Create anchor links to any content element on the page.
 composer require 'dimaip/anchor:@dev'
 ```
 
-Add `Dimaip.Anchor:AnchorMixin` mixin to any nodetype that you would want to link to.
+Add `Flownative.Anchorlinks:AnchorMixin` mixin to any nodetype that you would want to link to.
 
 E.g. this code will add such ability to every Content nodetype:
 
 ```
 'TYPO3.Neos:Content':
   superTypes:
-    'Dimaip.Anchor:AnchorMixin': true
+    'Flownative.Anchorlinks:AnchorMixin': true
 ```
 
-Add `Dimaip.Anchor:AnchorWrapper` processor to the same nodetype renderer to insert anchor tag with given id before it.
+Add `Flownative.Anchorlinks:AnchorWrapper` processor to the same nodetype renderer to insert anchor tag with given id before it.
 
 E.g.:
 
 ```
 prototype(TYPO3.Neos:Content) {
-	@process.appendAnchor = Dimaip.Anchor:AnchorWrapper
+	@process.appendAnchor = Flownative.Anchorlinks:AnchorWrapper
 }
 ```
 

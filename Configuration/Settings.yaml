@@ -2,10 +2,10 @@ TYPO3:
   Neos:
     typoScript:
       autoInclude:
-        Dimaip.Anchor: true
+        Flownative.Anchorlinks: true
     userInterface:
       translation:
         autoInclude:
-          'Dimaip.Anchor': ['Main', 'NodeTypes/*']
+          'Flownative.Anchorlinks': ['Main', 'NodeTypes/*']
       requireJsPathMapping:
-        'Dimaip.Anchor/Views': 'resource://Dimaip.Anchor/Public/JavaScript/Inspector/Views'
+        'Flownative.Anchorlinks/Views': 'resource://Flownative.Anchorlinks/Public/JavaScript/Inspector/Views'

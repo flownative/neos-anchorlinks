@@ -12,7 +12,7 @@ function(
 		template: Ember.Handlebars.compile(template),
 		buttonLabel: 'copy',
 		_buttonLabel: function() {
-			return I18n.translate('Dimaip.Anchor:Main:' + this.get('buttonLabel'), 'Copy link');
+			return I18n.translate('Flownative.Anchorlinks:Main:' + this.get('buttonLabel'), 'Copy link');
 		}.property('buttonLabel'),
 		_showButton: function() {
 			return this.get('inspector.nodeProperties.sectionId') ? true : false;

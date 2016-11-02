@@ -1,4 +1,4 @@
-'Dimaip.Anchor:AnchorMixin':
+'Flownative.Anchorlinks:AnchorMixin':
   abstract: true
   ui:
     inspector:
@@ -9,7 +9,7 @@
         anchor:
           label: 'Anchor view'
           group: 'anchor'
-          view: 'Dimaip.Anchor/Views/AnchorView'
+          view: 'Flownative.Anchorlinks/Views/AnchorView'
   properties:
     sectionId:
       type: string
