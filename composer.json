@@ -1,5 +1,5 @@
 {
-    "description": "Stuff to help you create anchor links",
+    "description": "Create links to headlines or sections in Neos",
     "type": "neos-package",
     "name": "flownative/anchorlinks",
     "license": "LGPL-3.0+",
