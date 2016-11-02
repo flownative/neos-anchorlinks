@@ -5,7 +5,7 @@ Create anchor links to any content element on the page.
 ## Setup
 
 ```
-composer require 'dimaip/anchor:@dev'
+composer require 'flownative/anchorlinks:@dev'
 ```
 
 Add `Flownative.Anchorlinks:AnchorMixin` mixin to any nodetype that you would want to link to.
