@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="Flownative.Anchorlinks" source-language="en" target-language="de" datatype="plaintext">
+		<body>
+			<trans-unit id="copy" xml:space="preserve">
+				<source>Copy link to node</source>
+				<target>Kopiere Link zu diesem Element</target>
+			</trans-unit>
+			<trans-unit id="copied" xml:space="preserve">
+				<source>Copied to clipboard!</source>
+				<target>In Zwischenablage kopiert!</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
