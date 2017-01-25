@@ -1,4 +1,5 @@
-TYPO3:
+
+Neos:
   Neos:
     typoScript:
       autoInclude:
@@ -6,6 +7,8 @@ TYPO3:
     userInterface:
       translation:
         autoInclude:
-          'Flownative.Anchorlinks': ['Main', 'NodeTypes/*']
+          Flownative.Anchorlinks:
+            - Main
+            - 'NodeTypes/*'
       requireJsPathMapping:
-        'Flownative.Anchorlinks/Views': 'resource://Flownative.Anchorlinks/Public/JavaScript/Inspector/Views'
+        Flownative.Anchorlinks/Views: 'resource://Flownative.Anchorlinks/Public/JavaScript/Inspector/Views'
