@@ -4,11 +4,13 @@
     "name": "flownative/anchorlinks",
     "license": "LGPL-3.0+",
     "require": {
-        "typo3/neos": "*"
+        "neos/fluid-adaptor": "^4.0",
+        "neos/fusion": "^3.0",
+        "neos/neos": "^3.0"
     },
     "autoload": {
-        "psr-0": {
-            "Flownative\\Anchorlinks": "Classes/"
+        "psr-4": {
+            "Flownative\\Anchorlinks\\": "Classes/"
         }
     },
     "extra": {
