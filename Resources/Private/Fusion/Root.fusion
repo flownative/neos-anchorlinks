@@ -1,0 +1,7 @@
+# Meant to be used as a processor. Prepends a tag with the sectionId
+prototype(Flownative.Anchorlinks:AnchorWrapper) < prototype(Neos.Fusion:Value) {
+    anchor = Neos.Fusion:Tag {
+        attributes.id = ${q(node).property('sectionId')}
+    }
+    value = ${q(node).property('sectionId') ? this.anchor + value : value}
+}

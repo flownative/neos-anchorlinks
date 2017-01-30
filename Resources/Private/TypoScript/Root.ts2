@@ -1,7 +1,0 @@
-# Meant to be used as a processor. Would prepend a tag with the sectionId
-prototype(Flownative.Anchorlinks:AnchorWrapper) < prototype(TYPO3.TypoScript:Value) {
-	anchor = TYPO3.TypoScript:Tag {
-		attributes.id = ${q(node).property('sectionId')}
-	}
-	value = ${q(node).property('sectionId') ? this.anchor + value : value}
-}
