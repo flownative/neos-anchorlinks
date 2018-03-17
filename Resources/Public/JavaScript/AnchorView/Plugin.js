@@ -264,7 +264,7 @@ var AnchorView = (_dec = (0, _reactRedux.connect)(function (state) {
     return {
         documentNode: _neosUiReduxStore.selectors.UI.ContentCanvas.documentNodeSelector(state),
         focusedNode: _neosUiReduxStore.selectors.CR.Nodes.focusedSelector(state),
-        transientSectionId: (0, _plowJs.$get)(['sectionId', 'value'], _neosUiReduxStore.selectors.UI.Inspector.transientValues(state))
+        transientSectionId: (0, _plowJs.$get)('sectionId.value', _neosUiReduxStore.selectors.UI.Inspector.transientValues(state))
     };
 }), _dec(_class = (_temp2 = _class2 = function (_Component) {
     _inherits(AnchorView, _Component);
@@ -301,31 +301,26 @@ var AnchorView = (_dec = (0, _reactRedux.connect)(function (state) {
         key: 'render',
         value: function render() {
             return this.getSetionId() && _react2.default.createElement(
-                'div',
-                { 'class': 'neos-inspector-field' },
+                _reactUiComponents.Button,
+                { style: 'brand', onClick: this.copyToClipboard },
+                _react2.default.createElement(_neosUiI18n2.default, {
+                    id: 'Flownative.Anchorlinks:Main:' + (this.state.isCopied ? 'copied' : 'copy'),
+                    fallback: 'Copy link'
+                }),
                 _react2.default.createElement(
-                    _reactUiComponents.Button,
-                    { style: 'brand', onClick: this.copyToClipboard },
-                    _react2.default.createElement(_neosUiI18n2.default, {
-                        id: 'Flownative.Anchorlinks:Main:' + (this.state.isCopied ? 'copied' : 'copy'),
-                        fallback: 'Copy link'
-                    }),
-                    '\xA0',
+                    'div',
+                    { style: {
+                            display: 'inline-block',
+                            width: '16px',
+                            height: '16px',
+                            fill: 'white',
+                            marginLeft: '3px',
+                            verticalAlign: 'sub'
+                        } },
                     _react2.default.createElement(
-                        'div',
-                        { style: {
-                                display: 'inline-block',
-                                width: '16px',
-                                height: '16px',
-                                fill: 'white',
-                                marginLeft: '3px',
-                                verticalAlign: 'sub'
-                            } },
-                        _react2.default.createElement(
-                            'svg',
-                            { viewBox: '0 0 896 1024', width: '100%', xmlns: 'http://www.w3.org/2000/svg' },
-                            _react2.default.createElement('path', { d: 'M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z' })
-                        )
+                        'svg',
+                        { viewBox: '0 0 896 1024', width: '100%', xmlns: 'http://www.w3.org/2000/svg' },
+                        _react2.default.createElement('path', { d: 'M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z' })
                     )
                 )
             );
