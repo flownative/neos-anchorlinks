@@ -4,14 +4,9 @@
     "name": "flownative/anchorlinks",
     "license": "LGPL-3.0+",
     "require": {
-        "neos/fluid-adaptor": "^4.0",
-        "neos/fusion": "^3.0",
-        "neos/neos": "^3.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Flownative\\Anchorlinks\\": "Classes/"
-        }
+        "neos/fluid-adaptor": "^4.0 | ^5.0",
+        "neos/fusion": "^3.0 | ^4.0",
+        "neos/neos": "^3.0 | ^4.0"
     },
     "extra": {
         "neos": {
@@ -81,7 +76,15 @@
             "Neos.Neos-20161219122512",
             "Neos.Fusion-20161219130100",
             "Neos.Neos-20161220163741",
-            "Neos.Fusion-20170120013047"
+            "Neos.Fusion-20170120013047",
+            "Neos.ContentRepository.Search-20161210231100",
+            "Neos.Neos-20170115114620",
+            "Neos.Flow-20170125103800",
+            "Neos.Seo-20170127154600",
+            "Neos.Flow-20170127183102",
+            "Neos.Fusion-20180211175500",
+            "Neos.Fusion-20180211184832",
+            "Neos.Flow-20180415105700"
         ]
     }
 }

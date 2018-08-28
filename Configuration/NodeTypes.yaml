@@ -1,4 +1,4 @@
-'Flownative.Anchorlinks:AnchorMixin':
+Flownative.Anchorlinks:AnchorMixin:
   abstract: true
   ui:
     inspector:
@@ -7,9 +7,9 @@
           label: i18n
       views:
         anchor:
-          label: 'Anchor view'
-          group: 'anchor'
-          view: 'Flownative.Anchorlinks/Views/AnchorView'
+          label: Anchor view
+          group: anchor
+          view: Flownative.Anchorlinks/Views/AnchorView
   properties:
     sectionId:
       type: string
