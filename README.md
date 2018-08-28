@@ -17,9 +17,9 @@ Add the `Flownative.Anchorlinks:AnchorMixin` mixin to any nodetype that you woul
 E.g. this code will add such ability to every Content nodetype:
 
 ```yaml
-'Neos.Neos:Content':
+Neos.Neos:Content:
   superTypes:
-    'Flownative.Anchorlinks:AnchorMixin': true
+    Flownative.Anchorlinks:AnchorMixin: true
 ```
 
 Add the `Flownative.Anchorlinks:AnchorWrapper` processor to the same nodetype renderer to insert an anchor tag with the given id before it.

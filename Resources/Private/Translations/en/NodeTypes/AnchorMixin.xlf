@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file original="" product-name="Flownative.Anchorlinks" source-language="en" datatype="plaintext">
-		<body>
-			<trans-unit id="groups.anchor" xml:space="preserve">
-				<source>Anchor</source>
-			</trans-unit>
-			<trans-unit id="properties.sectionId" xml:space="preserve">
-				<source>Section id</source>
-			</trans-unit>
-			<trans-unit id="properties.sectionId.ui.help.message" xml:space="preserve">
-				<source>Fill in the section id, save and click the button below to copy the link to this node. You can paste it like any other link in the text editor or in inspector fields.</source>
-			</trans-unit>
-		</body>
-	</file>
+    <file original="" product-name="Flownative.Anchorlinks" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="groups.anchor">
+                <source>Anchor</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionId">
+                <source>Section id</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionId.ui.help.message">
+                <source>Fill in the section id, save and click the button below to copy the link to this node. You can paste it like any other link in the text editor or in inspector fields.</source>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>
