@@ -4,8 +4,6 @@
     "name": "flownative/anchorlinks",
     "license": "LGPL-3.0+",
     "require": {
-        "neos/fluid-adaptor": "^4.0",
-        "neos/fusion": "^3.0 || ^4.0",
         "neos/neos": "^3.0 || ^4.0"
     },
     "autoload": {
