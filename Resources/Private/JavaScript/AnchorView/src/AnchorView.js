@@ -7,7 +7,7 @@ import I18n from '@neos-project/neos-ui-i18n';
 import {$get} from 'plow-js';
 
 @connect(state => ({
-    documentNode: selectors.UI.ContentCanvas.documentNodeSelector(state),
+    documentNode: selectors.CR.Nodes.documentNodeSelector(state),
     focusedNode: selectors.CR.Nodes.focusedSelector(state),
     transientSectionId: $get('sectionId.value', selectors.UI.Inspector.transientValues(state))
 }))
