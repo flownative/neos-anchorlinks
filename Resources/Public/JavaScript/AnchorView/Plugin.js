@@ -262,7 +262,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var AnchorView = (_dec = (0, _reactRedux.connect)(function (state) {
     return {
-        documentNode: _neosUiReduxStore.selectors.UI.ContentCanvas.documentNodeSelector(state),
+        documentNode: _neosUiReduxStore.selectors.CR.Nodes.documentNodeSelector(state),
         focusedNode: _neosUiReduxStore.selectors.CR.Nodes.focusedSelector(state),
         transientSectionId: (0, _plowJs.$get)('sectionId.value', _neosUiReduxStore.selectors.UI.Inspector.transientValues(state))
     };

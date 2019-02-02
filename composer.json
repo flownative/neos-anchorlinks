@@ -6,6 +6,9 @@
     "require": {
         "neos/neos": "^3.0 || ^4.0"
     },
+    "conflict": {
+        "neos/neos-ui": "<2.0.0"
+    },
     "autoload": {
         "psr-4": {
             "Flownative\\Anchorlinks\\": "Classes/"
