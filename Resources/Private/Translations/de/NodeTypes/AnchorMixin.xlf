@@ -11,8 +11,8 @@
 				<target>Abschnitts-ID</target>
 			</trans-unit>
 			<trans-unit id="properties.sectionId.ui.help.message" xml:space="preserve">
-				<source>Fill in the section id, save and click the button below to copy the link to this node. You can paste it like any other link in the text editor or in inspector fields.</source>
-				<target>Abschnitts-ID eingeben, speichern und den unter dem Feld erscheinenden Button klicken um den Link zu diesem Element zu kopieren. Dieser kann wie jeder andere Link im Texteditor oder in Feldern des Inspektors eingefügt werden.</target>
+				<source>Enter a section ID of the type short-text-without-special-characters. After you click Save, a button for copying the link appears below it. This link can be pasted in the text editor or in fields of the Inspector and will lead directly to the section.</source>
+				<target>Gib eine Abschnitts-ID in der Art kurzer-text-ohne-sonderzeichen ein. Nachdem du auf Speichern klickst, erscheint darunter ein Button zum Kopieren des Links. Dieser Link im Texteditor oder in Feldern des Inspektors eingefügt werden und führt direkt zum Abschnitt.</target>
 			</trans-unit>
 		</body>
 	</file>

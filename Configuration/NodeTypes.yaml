@@ -20,3 +20,9 @@
           group: anchor
         help:
           message: i18n
+      validation:
+        'Neos.Neos/Validation/StringLengthValidator':
+          minimum: 1
+          maximum: 255
+        'Neos.Neos/Validation/RegularExpressionValidator':
+          regularExpression: '/^[a-z0-9\-]+$/i'
