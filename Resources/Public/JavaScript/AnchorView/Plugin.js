@@ -1191,7 +1191,7 @@ var _AnchorView2 = _interopRequireDefault(_AnchorView);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _neosUiExtensibility2.default)('Flownative.AnchorLinks:AnchorView', {}, function (globalRegistry) {
+(0, _neosUiExtensibility2.default)('Flownative.Anchorlinks:AnchorView', {}, function (globalRegistry) {
     var viewsRegistry = globalRegistry.get('inspector').get('views');
 
     viewsRegistry.set('Flownative.Anchorlinks/Views/AnchorView', {
