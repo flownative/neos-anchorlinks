@@ -9,7 +9,7 @@
 				<source>Section id</source>
 			</trans-unit>
 			<trans-unit id="properties.sectionId.ui.help.message" xml:space="preserve">
-				<source>Fill in the section id, save and click the button below to copy the link to this node. You can paste it like any other link in the text editor or in inspector fields.</source>
+				<source>Enter a section ID of the type short-text-without-special-characters. After you click Save, a button for copying the link appears below it. This link can be pasted in the text editor or in fields of the Inspector and will lead directly to the section.</source>
 			</trans-unit>
 		</body>
 	</file>
