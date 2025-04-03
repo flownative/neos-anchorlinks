@@ -436,26 +436,6 @@ module.exports = (0, _readFromConsumerApi2.default)('NeosProjectPackages')().Rea
 
 /***/ }),
 
-/***/ "./node_modules/@neos-project/neos-ui-extensibility/src/shims/vendor/plow-js/index.js":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/@neos-project/neos-ui-extensibility/src/shims/vendor/plow-js/index.js ***!
-  \********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _readFromConsumerApi = __webpack_require__(/*! ../../../../dist/readFromConsumerApi */ "./node_modules/@neos-project/neos-ui-extensibility/dist/readFromConsumerApi.js");
-
-var _readFromConsumerApi2 = _interopRequireDefault(_readFromConsumerApi);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-module.exports = (0, _readFromConsumerApi2.default)('vendor')().plow;
-
-/***/ }),
-
 /***/ "./node_modules/@neos-project/neos-ui-extensibility/src/shims/vendor/prop-types/index.js":
 /*!***********************************************************************************************!*\
   !*** ./node_modules/@neos-project/neos-ui-extensibility/src/shims/vendor/prop-types/index.js ***!
@@ -1044,7 +1024,7 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+	value: true
 });
 exports.default = undefined;
 
@@ -1070,8 +1050,6 @@ var _neosUiI18n = __webpack_require__(/*! @neos-project/neos-ui-i18n */ "./node_
 
 var _neosUiI18n2 = _interopRequireDefault(_neosUiI18n);
 
-var _plowJs = __webpack_require__(/*! plow-js */ "./node_modules/@neos-project/neos-ui-extensibility/src/shims/vendor/plow-js/index.js");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1081,77 +1059,80 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var AnchorView = (_dec = (0, _reactRedux.connect)(function (state) {
-    return {
-        documentNode: _neosUiReduxStore.selectors.CR.Nodes.documentNodeSelector(state),
-        focusedNode: _neosUiReduxStore.selectors.CR.Nodes.focusedSelector(state),
-        transientSectionId: (0, _plowJs.$get)('sectionId.value', _neosUiReduxStore.selectors.UI.Inspector.transientValues(state))
-    };
+	var transientValues = _neosUiReduxStore.selectors.UI.Inspector.transientValues(state);
+
+	return {
+		documentNode: _neosUiReduxStore.selectors.CR.Nodes.documentNodeSelector(state),
+		focusedNode: _neosUiReduxStore.selectors.CR.Nodes.focusedSelector(state),
+		transientSectionId: transientValues ? transientValues.sectionId.value : null
+	};
 }), _dec(_class = (_temp2 = _class2 = function (_Component) {
-    _inherits(AnchorView, _Component);
+	_inherits(AnchorView, _Component);
 
-    function AnchorView() {
-        var _ref;
+	function AnchorView() {
+		var _ref;
 
-        var _temp, _this, _ret;
+		var _temp, _this, _ret;
 
-        _classCallCheck(this, AnchorView);
+		_classCallCheck(this, AnchorView);
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
+		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+			args[_key] = arguments[_key];
+		}
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AnchorView.__proto__ || Object.getPrototypeOf(AnchorView)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            isCopied: false
-        }, _this.getSetionId = function () {
-            return _this.props.transientSectionId || (0, _plowJs.$get)('properties.sectionId', _this.props.focusedNode);
-        }, _this.copyToClipboard = function () {
-            var documentNodeIdentifier = (0, _plowJs.$get)('identifier', _this.props.documentNode);
-            var link = 'node://' + documentNodeIdentifier + '#' + _this.getSetionId();
-            var textArea = document.createElement('textarea');
-            textArea.innerText = link;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            textArea.parentNode.removeChild(textArea);
-            _this.setState({ isCopied: true });
-        }, _temp), _possibleConstructorReturn(_this, _ret);
-    }
+		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AnchorView.__proto__ || Object.getPrototypeOf(AnchorView)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+			isCopied: false
+		}, _this.getSetionId = function () {
+			return _this.props.transientSectionId || _this.props.focusedNode ? _this.props.focusedNode.properties.sectionId : false;
+		}, _this.copyToClipboard = function () {
+			var documentNodeIdentifier = _this.props.documentNode.identifier;
+			var link = 'node://' + documentNodeIdentifier + '#' + _this.getSetionId();
+			var textArea = document.createElement('textarea');
+			textArea.innerText = link;
+			document.body.appendChild(textArea);
+			textArea.select();
+			document.execCommand('copy');
+			textArea.parentNode.removeChild(textArea);
+			_this.setState({ isCopied: true });
+		}, _temp), _possibleConstructorReturn(_this, _ret);
+	}
 
-    _createClass(AnchorView, [{
-        key: 'render',
-        value: function render() {
-            return this.getSetionId() && _react2.default.createElement(
-                _reactUiComponents.Button,
-                { style: 'brand', onClick: this.copyToClipboard },
-                _react2.default.createElement(_neosUiI18n2.default, {
-                    id: 'Flownative.Anchorlinks:Main:' + (this.state.isCopied ? 'copied' : 'copy'),
-                    fallback: 'Copy link'
-                }),
-                _react2.default.createElement(
-                    'div',
-                    { style: {
-                            display: 'inline-block',
-                            width: '16px',
-                            height: '16px',
-                            fill: 'white',
-                            marginLeft: '3px',
-                            verticalAlign: 'sub'
-                        } },
-                    _react2.default.createElement(
-                        'svg',
-                        { viewBox: '0 0 896 1024', width: '100%', xmlns: 'http://www.w3.org/2000/svg' },
-                        _react2.default.createElement('path', { d: 'M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z' })
-                    )
-                )
-            );
-        }
-    }]);
+	_createClass(AnchorView, [{
+		key: 'render',
+		value: function render() {
+			return this.getSetionId() && _react2.default.createElement(
+				_reactUiComponents.Button,
+				{ style: 'brand', onClick: this.copyToClipboard },
+				_react2.default.createElement(_neosUiI18n2.default, {
+					id: 'Flownative.Anchorlinks:Main:' + (this.state.isCopied ? 'copied' : 'copy'),
+					fallback: 'Copy link'
+				}),
+				_react2.default.createElement(
+					'div',
+					{ style: {
+							display: 'inline-block',
+							width: '16px',
+							height: '16px',
+							fill: 'white',
+							marginLeft: '3px',
+							verticalAlign: 'sub'
+						} },
+					_react2.default.createElement(
+						'svg',
+						{ viewBox: '0 0 896 1024', width: '100%', xmlns: 'http://www.w3.org/2000/svg' },
+						_react2.default.createElement('path', {
+							d: 'M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z' })
+					)
+				)
+			);
+		}
+	}]);
 
-    return AnchorView;
+	return AnchorView;
 }(_react.Component), _class2.propTypes = {
-    focusedNode: _propTypes2.default.object,
-    documentNode: _propTypes2.default.object,
-    transientSectionId: _propTypes2.default.string
+	focusedNode: _propTypes2.default.object,
+	documentNode: _propTypes2.default.object,
+	transientSectionId: _propTypes2.default.string
 }, _temp2)) || _class);
 exports.default = AnchorView;
 
