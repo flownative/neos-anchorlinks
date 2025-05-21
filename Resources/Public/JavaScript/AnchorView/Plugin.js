@@ -1064,7 +1064,7 @@ var AnchorView = (_dec = (0, _reactRedux.connect)(function (state) {
 	return {
 		documentNode: _neosUiReduxStore.selectors.CR.Nodes.documentNodeSelector(state),
 		focusedNode: _neosUiReduxStore.selectors.CR.Nodes.focusedSelector(state),
-		transientSectionId: transientValues ? transientValues.sectionId.value : null
+		transientSectionId: transientValues && transientValues.sectionId ? transientValues.sectionId.value : null
 	};
 }), _dec(_class = (_temp2 = _class2 = function (_Component) {
 	_inherits(AnchorView, _Component);

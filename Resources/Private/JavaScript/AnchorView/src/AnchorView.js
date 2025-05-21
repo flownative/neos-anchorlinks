@@ -11,7 +11,7 @@ import I18n from '@neos-project/neos-ui-i18n';
 	return ({
 		documentNode: selectors.CR.Nodes.documentNodeSelector(state),
 		focusedNode: selectors.CR.Nodes.focusedSelector(state),
-		transientSectionId: transientValues ? transientValues.sectionId.value : null
+		transientSectionId: (transientValues && transientValues.sectionId) ? transientValues.sectionId.value : null
 	});
 })
 export default class AnchorView extends Component {
